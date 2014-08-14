@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=1024, user-scalable=no">
 
-  <title>Your deck.js Presentation</title>
+  <title>游子 XP2D 工作流介绍</title>
 
   <!-- Required stylesheet -->
   <link rel="stylesheet" href="core/deck.core.css">
@@ -19,7 +19,10 @@
 
   <!-- Style theme. More available in /themes/style/ or create your own. -->
   <link rel="stylesheet" media="screen" href="themes/style/web-2.0.css">
+  <link rel="stylesheet" media="screen" href="themes/style/xp2d.css">
 
+  <link href="//libs.baidu.com/fontawesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+  
   <!-- Transition theme. More available in /themes/transition/ or create your own. -->
   <link rel="stylesheet" media="screen" href="themes/transition/horizontal-slide.css">
 
@@ -34,17 +37,287 @@
 
     <!-- Begin slides. Just make elements with a class of slide. -->
 
-    <section class="slide">
-      <h1>Slide</h1>
+    <section class="slide" id="title-slide">
+      <h1>游子 XPD<sup>2</sup> 工作流</h1>
+      <h2>eXtreme Product Design &amp; Development</h2>
+      <h3>
+        胡杨刚<br>
+        <span>yangg.hu@yoozi.cn</span>
+      </h3>
+      <p>
+        <a href="https://github.com/cnsaturn/xpd"><i class="fa fa-download"></i> 下载讲稿</a> &nbsp;
+        <a href="https://github.com/yoozi"><i class="fa fa-github"></i> 游子开源</a> &nbsp;
+        <a href="http://saturn.yoozi.org/iTalk/#title-slide"><i class="fa fa-globe"></i> 2012 年第一版</a> &nbsp;
+      </p>
     </section>
 
     <section class="slide">
-      <h1>Content</h1>
+      <h2>WTF is XPD<sup>2</sup>?</h2>
+      <blockquote cite="http://example.org">
+        <p>e<strong style="color:#c60">X</strong>treme <strong style="color:#c60">P</strong>roduct <strong style="color:#c60">D</strong>esign &amp; <strong style="color:#c60">D</strong>evelopment.</p>
+        <p><cite>游子团队多年来积累与总结形成的互联网产品设计和研发模型。</cite></p>
+      </blockquote>
+      <p>相比传统互联网研发体系，XPD<sup>2</sup> 中的 eXtreme（极限）主要体现在：</p>
+       <ol>
+         <li><span class="hl">多</span>：尽可能多的挖掘成员一切潜力。</li>
+         <li><span class="hl">快</span>：尽可能快的将产品推入市场进行验证，从而尽可能可能早的发现和解决问题。</li>
+         <li><span class="hl">好</span>：尽可能选择和使用业界最好的生产力工具和协作工具。</li>
+         <li><span class="hl">省</span>：尽可能减少沟通环节和沟通成本。</li>
+       </ol>
     </section>
 
     <section class="slide">
-      <h1>Here</h1>
+      <h2>主题 Walkthru</h2>
+      <ol>
+        <li>
+          <h3>成员角色和组成原则</h3>
+          <p>以小组为单位，搭建 XPD<sup>2</sup> 所需的精干产品团队。</p>
+        </li>
+        <li>
+          <h3>迭代设计和迭代研发</h3>
+          <p>将敏捷迭代理念注入到产品的设计、研发和生产的每一个环节。</p>
+        </li>
+        <li>
+          <h3>协作流程和质量保证</h3>
+          <p>通过自动化持续集成工具，结合 Peer Review 协作规则保证高质量研发产出。</p>
+        </li>
+      </ol>
     </section>
+
+    <section class="slide">
+      <h2>成员角色 Members</h2>
+      <ol class="pull-left">
+        <li>
+            <h3>产品经理（1人）</h3>
+            <p>负责功能框架、时间节点、风险把控和内外部资源协调等。</p>
+        </li>
+        <li>
+            <h3>交互设计师（1人）</h3>
+            <p>负责产品信息架构、交互设计和界面细节等 UCD 体验设计。</p>
+        </li>
+        <li>
+            <h3>视觉设计师（1人）</h3>
+            <p>负责产品全部视觉界面的持续优化。</p>
+        </li>
+        <li>
+            <h3>程序猿（若干）</h3>
+            <p>负责产品的研发实现和优化，择一人作为架构师协调程序猿们。</p>
+        </li>
+      </ol>
+      <div class="pull-right">
+        <img src="images/iceberg.jpeg">
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>组成原则 Principles</h2>
+      <ul>
+        <li>
+            <h3>以小组形式组建产品团队。</h3>
+            <p>首先确定产品经理人选，并由产品经理挑选小组成员。</p>
+        </li>
+        <li>
+            <h3>人员角色可重叠，但应避免交叉授权。</h3>
+            <p>细分岗位、明确职责，杜绝相互推诿。</p>
+        </li>
+        <li>
+            <h3>控制小组规模，在精不在多。</h3>
+            <p>选择具有 Full Stack Developer 全栈式程序员潜质的成员作为产品首版核心成员。</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>时间分配 Time Management</h2>
+      <p><img src="images/timing.png"></p>
+      <p>每个产品迭代周期的时间分配遵守『3-6-1』准则：</p>
+       <ol>
+         <li>至少 <strong style="color:#c60">30%</strong> 的时间用于产品概念设计、低保真和高保真设计，并进行大量的技术选型和调研。</li>
+         <li>不超过 <strong style="color:#c60">60%</strong> 的时间用于快速迭代开发，并穿插进行产品设计优化。</li>
+         <li>剩余 <strong style="color:#c60">10%</strong> 的时间用于流程性测试和盲测，并作每轮上线前的最后改进。</li>
+       </ol>
+    </section>
+
+    <section class="slide">
+      <h2>概念设计 Conceptual Design</h2>
+      <p>产品从无到有、从模糊到清晰的结构化设计阶段。<strong class="hl">梳理业务流程</strong>和<strong class="hl">完成目标制定</strong>是本阶段主要工作。</p>
+      <p class="hint">本阶段可能伴随多个有全员参加的头脑风暴座谈会。</p>
+      <ul class="pull-left">
+        <li>负责人：产品经理</li>
+        <li>审核人：交互设计师</li>
+        <li>工具：
+            <ul>
+                <li>铅笔、纸、尺</li>
+                <li>电子绘图板</li>
+                <li>XMind</li>
+                <li>Microsoft Word</li>
+            </ul>
+        </li>
+        <li>按需产出以下一项或多项：
+            <ol>
+                <li>功能框架图。</li>
+                <li>概念手绘稿。</li>
+                <li>PRD 文档。</li>
+            </ol>
+        </li>
+      </ul>
+      <p class="pull-right"><img src="images/conceptual-design.jpg" width="409" height="480"></p>
+    </section>
+
+    <section class="slide">
+      <h2>低保真设计 Low Resolution Design</h2>
+      <p>制定交互规范，以概念设计为蓝本，精确设计视觉元素和信息架构。<strong class="hl">信息架构</strong>和<strong class="hl">人机交互</strong>是本阶段主要设计工作。</p>
+      <p class="hint">本阶段程序猿开始介入评估技术架构，并编写交互设计所需基础库代码。</p>
+      <ul class="pull-left">
+        <li>负责人：交互设计师</li>
+        <li>审核人：视觉设计师</li>
+        <li>工具：
+            <ul>
+                <li>OmniGraffle</li>
+                <li>Axure</li>
+            </ul>
+        </li>
+        <li>阶段性产出：
+            <ol>
+                <li>Axure / OmniGraffle 交互设计稿。</li>
+                <li>UI 交互规范。</li>
+            </ol>
+        </li>
+      </ul>
+      <p class="pull-right"><img src="images/low-resolution.png" width="409" height="480"></p>
+    </section>
+
+    <section class="slide">
+      <h2>高保真设计 High Resolution Design</h2>
+      <p>确定 UI 视觉规范，设计像素级的产品原型和视觉素材，并初步确定产品界面文案。</p>
+      <p class="hint">本阶段进行大规模设计迭代，并组织一次全员中期项目会议——最后一次调整项目 Deadline。</p>
+      <ul class="pull-left">
+        <li>负责人：视觉设计师</li>
+        <li>审核人：产品经理 / 交互设计师 / 架构师</li>
+        <li>工具：
+            <ul>
+                <li>Sketch</li>
+                <li>Photoshop</li>
+                <li>PS Play</li>
+            </ul>
+        </li>
+        <li>阶段性产出：
+            <ol>
+                <li>UI 视觉规范。</li>
+                <li>高保真设计稿。</li>
+                <li>高保真设计标注稿。</li>
+            </ol>
+        </li>
+      </ul>
+      <p class="pull-right"><img src="images/high-resolution.png" height="480"></p>
+    </section>
+
+    <section class="slide">
+      <h2>功能排期规划 Plans on Features</h2>
+      <p>以 User Story 用户故事方式对产品功能进行分拆描述，同时为每个 User Story 设置优先级。本阶段需尽量保证每个产品功能相互独立、互不干扰，且排期设置合理。</p>
+      <ul class="pull-left">
+        <li>负责人：产品经理</li>
+        <li>审核人：程序员</li>
+        <li>阶段性产出：
+            <ol>
+                <li>User Story 用户故事。</li>
+                <li>User Story 优先级清单。</li>
+            </ol>
+        </li>
+      </ul>
+      <p class="pull-right"><img src="images/user-story.png" width="400"></p>
+    </section>
+
+    <section class="slide">
+      <h2>技术架构规划 Plans on Tech</h2>
+      <p>根据业务需求和产品原型，制定和准备实现产品功能所需的技术框架和技术规范。本阶段包含数据库设计、API 架构设计、前后端技术选型等主要工作。</p>
+      <ul class="pull-left">
+        <li>负责人：架构师</li>
+        <li>审核人：产品经理 / 程序员</li>
+        <li>阶段性产出：
+            <ol>
+                <li>撰写开发者文档结构。</li>
+                <li>搭建代码托管项目，导入基础程序代码。</li>
+                <li>搭建自动集成环境。</li>
+                <li>搭建测试环境。</li>
+                <li>制定技术规范。</li>
+            </ol>
+        </li>
+      </ul>
+      <p class="pull-right"><img src="images/api.png"></p>
+    </section>
+
+    <section class="slide">
+      <h2>迭代研发 R&amp;D Iteration</h2>
+      <p>程序猿自行认领 User Story，并开始程序研发编码。每位程序猿负责从功能拆解、程序编码、单元测试到文档撰写的全流程工作内容。</p>
+      <p class="pull-left" style="margin-right:50px;"><img src="images/peer-review.png" width="400"></p>
+      <ul>
+        <li>负责人：程序猿</li>
+        <li>审核人：程序猿同伴</li>
+        <li>任何程序代码和文档均需经过同伴的审核（Peer Review）通过后，才能合并入主代码库。</li>
+        <li>禁止使用 IM 即时通讯工具（如微信、QQ、Skype 等）讨论产品和技术细节问题，任何具体功能和技术讨论均应该在项目管理软件中进行。</li>
+        <li style="list-style:none;"><img src="images/discussion.png" height="350"></li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>协作工具 Toolkits</h2>
+      <p>适合 10~50 人之间的开发团队，每月固定财务花费约 200 USD（~ 1400 CNY）。</p>
+      <ul style="list-style:none;">
+        <li class="pull-left">
+            <h3>Basecamp：产品设计与规划执行</h3>
+            <p>产品功能讨论（Messages）、文档协同撰写（Writeboards）、待办事项（To-Dos）、团队日历（Calendar）和时间管理（Time Tracking）</p>
+        </li>
+        <li>
+            <h3>Github：源代码管理与缺陷跟踪</h3>
+            <p>代码托管（Git）、产品功能路线图（Milestone）、代码审查（Code Review）、Bug 跟踪（Issues）</p>
+        </li>
+        <li>
+            <h3>企业邮箱：信息中心与消息推送</h3>
+            <p>通过绑定 QQ 或微信，将开发相关任务即时、准确的传达到每位订阅成员。</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>协作信息流 Collaborative Flow</h2>
+      <div style="float:left">
+    <ol>
+      <li><strong>Basecamp</strong>：制定产品规划与开发分工</li>
+      <li><strong>QQ企业邮箱</strong>：成员参与讨论与制定规划</li>
+      <li><strong>微信/QQ</strong>：推送订阅信息到指定成员</li>
+      <li><strong>Github</strong>：开发所需功能、缺陷跟踪</li>
+      <li><strong>生产环境服务器</strong>：自动部署上线</li>
+    </ol>
+  </div>
+  <div style="float:right;text-align:left">
+  <img src="images/workflow.png" />
+  </div>
+    </section>
+
+    <section class="slide">
+      <img src="images/quality_assurance.gif">
+    </section>
+
+    <section class="slide">
+      <h2>交叉审查 Peer Review</h2>
+      <ol>
+        <li>任何阶段性产出需要交叉审核通过后，才能进入下一阶段流程。</li>
+        <li>任何程序代码和文档需经过交叉审核（Peer Review）通过后，才能合并入主代码库。</li>
+        <li>禁止使用 IM 即时通讯工具（如微信、QQ、Skype 等）讨论产品和技术细节问题，任何具体功能和技术讨论均应该在项目管理软件中进行。</li>
+        <li>所有交叉审核过程需要书面记录在案，方便回溯、并促进团队知识沉淀。</li>
+      </ol>
+    </section>
+
+    <section class="slide" id="the-end-slide">
+    <h1>感谢大家！</h1>
+    <h2>Q &amp; A</h2>
+    <p>
+    <a href="https://github.com/cnsaturn/iTalk"><i class="fa fa-github"></i> Slides and Source on Github</a> &nbsp;
+    <a href="mailto:yangg.hu@yoozi.cn"><i class="fa fa-envelope"></i> Me</a> &nbsp;
+    </p>
+    </section>
+    
 
     <!-- End slides. -->
 
