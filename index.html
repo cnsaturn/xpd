@@ -41,8 +41,8 @@
       <h1>游子 XPD<sup>2</sup> 工作流</h1>
       <h2>eXtreme Product Design &amp; Development</h2>
       <h3>
-        胡杨刚<br>
-        <span>yangg.hu@yoozi.cn</span>
+        游子科技<br>
+        <span>hello@yoozi.cn</span>
       </h3>
       <p>
         <a href="https://github.com/cnsaturn/xpd"><i class="fa fa-download"></i> 下载讲稿</a> &nbsp;
@@ -82,8 +82,8 @@
           <p>将敏捷迭代理念注入到产品的设计、研发和生产的每一个环节。</p>
         </li>
         <li>
-          <h3>协作流程和质量保证</h3>
-          <p>通过自动化持续集成工具，结合 Peer Review 协作规则保证高质量研发产出。</p>
+          <h3>协作工具和质量保证</h3>
+          <p>通过工具和规则组合实现高效协同，产出高质量互联网软件。</p>
         </li>
       </ol>
     </section>
@@ -179,12 +179,15 @@
             <ul>
                 <li>OmniGraffle</li>
                 <li>Axure</li>
+                <li>Sketch</li>
+                <li><strong>Yoozi Flowit</strong></li>
             </ul>
         </li>
         <li>阶段性产出：
             <ol>
-                <li>Axure / OmniGraffle 交互设计稿。</li>
+                <li>Axure / OmniGraffle / Sketch / Flowit 交互设计稿。</li>
                 <li>UI 交互规范。</li>
+                <li>完善 PRD 文档。</li>
             </ol>
         </li>
       </ul>
@@ -200,9 +203,8 @@
         <li>审核人：产品经理 / 交互设计师 / 架构师</li>
         <li>工具：
             <ul>
-                <li>Sketch</li>
-                <li>Photoshop</li>
-                <li>PS Play</li>
+                <li>Sketch / Sketch Mirror</li>
+                <li>Photoshop / PS Play</li>
             </ul>
         </li>
         <li>阶段性产出：
@@ -213,7 +215,7 @@
             </ol>
         </li>
       </ul>
-      <p class="pull-right"><img src="images/high-resolution.png" height="480"></p>
+      <p class="pull-right"><img src="images/high-resolution.png" width="400" height="385"></p>
     </section>
 
     <section class="slide">
@@ -265,52 +267,56 @@
     </section>
 
     <section class="slide">
-      <h2>协作工具 Toolkits</h2>
-      <p>适合 10~50 人之间的开发团队，每月固定财务花费约 200 USD（~ 1400 CNY）。</p>
-      <ul style="list-style:none;">
-        <li class="pull-left">
-            <h3>Basecamp：产品设计与规划执行</h3>
-            <p>产品功能讨论（Messages）、文档协同撰写（Writeboards）、待办事项（To-Dos）、团队日历（Calendar）和时间管理（Time Tracking）</p>
+      <h2>主要工具选型 Toolkits</h2>
+      <ul>
+        <li>
+            <h3>Trello：产品设计与规划执行</h3>
+            <p>头脑风暴（Brainstorming）、待办事项（Todo List）、时间管理（Time Management）</p>
         </li>
         <li>
             <h3>Github：源代码管理与缺陷跟踪</h3>
             <p>代码托管（Git）、产品功能路线图（Milestone）、代码审查（Code Review）、Bug 跟踪（Issues）</p>
         </li>
         <li>
-            <h3>企业邮箱：信息中心与消息推送</h3>
+            <h3>Email：信息中心与消息推送</h3>
             <p>通过绑定 QQ 或微信，将开发相关任务即时、准确的传达到每位订阅成员。</p>
+        </li>
+        <li>
+            <h3>Jenkins CI：自动集成、自动单元测试与自动部署</h3>
+            <p>通过 Jenkins CI 自动化部署环境实时自动部署测试/演示程序、开发文档的自动部署和集成测试。</p>
+        </li>
+        <li>
+            <h3>Sphinx：Textile 语法的文档撰写工具</h3>
+            <p>通过 Sphinx 实现文档协作编写，将其源文件直接存放于版本库实现文档的版本控制。</p>
         </li>
       </ul>
     </section>
 
     <section class="slide">
-      <h2>协作信息流 Collaborative Flow</h2>
-      <div style="float:left">
-    <ol>
-      <li><strong>Basecamp</strong>：制定产品规划与开发分工</li>
-      <li><strong>QQ企业邮箱</strong>：成员参与讨论与制定规划</li>
-      <li><strong>微信/QQ</strong>：推送订阅信息到指定成员</li>
-      <li><strong>Github</strong>：开发所需功能、缺陷跟踪</li>
-      <li><strong>生产环境服务器</strong>：自动部署上线</li>
-    </ol>
-  </div>
-  <div style="float:right;text-align:left">
-  <img src="images/workflow.png" />
-  </div>
+      <h2>研发迭代流程 Dev Iterate Process</h2>
+      <img src="images/quality-assurance.png">
     </section>
 
     <section class="slide">
-      <img src="images/quality_assurance.gif">
-    </section>
-
-    <section class="slide">
-      <h2>交叉审查 Peer Review</h2>
-      <ol>
-        <li>任何阶段性产出需要交叉审核通过后，才能进入下一阶段流程。</li>
-        <li>任何程序代码和文档需经过交叉审核（Peer Review）通过后，才能合并入主代码库。</li>
-        <li>禁止使用 IM 即时通讯工具（如微信、QQ、Skype 等）讨论产品和技术细节问题，任何具体功能和技术讨论均应该在项目管理软件中进行。</li>
-        <li>所有交叉审核过程需要书面记录在案，方便回溯、并促进团队知识沉淀。</li>
-      </ol>
+      <h2>游子质量保证 Quality Assurance</h2>
+      <ul>
+        <li>
+            <h3>交叉审查 Cross Check</h3>
+            <p>任何阶段性产出需要交叉审核通过后，才能进入下一阶段流程。</p>
+        </li>
+        <li>
+            <h3>代码审查 Code Review</h3>
+            <p>任何程序代码和文档需经过交叉审核通过后，才能合并入主代码库。</p>
+        </li>
+        <li>
+            <h3>避免信息轰炸 On-demand Push Notification</h3>
+            <p>通过企业邮箱按需给每位设计师和程序员主动实时推送其订阅或相关联的信息。</p>
+        </li>
+        <li>
+            <h3>信息存照 Track it All</h3>
+            <p>所有产品演进过程均需记录在案，方便回溯、并促进团队知识沉淀。禁止使用 IM 即时通讯工具（如微信、QQ、Skype 等）讨论产品和技术细节问题。</p>
+        </li>
+      </ul>
     </section>
 
     <section class="slide" id="the-end-slide">
